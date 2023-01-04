@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta http-equiv='cache-control' content='no-cache'> 
-  <meta http-equiv='expires' content='0'> 
-  <meta http-equiv='pragma' content='no-cache'>
-<title>Page Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+<!--   <link href='https://fonts.googleapis.com/css?family=Chivo Mono' rel='stylesheet'> -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <style>
+    p{
+      color:white; 
+    }
+    .wrapper-text{
+      color: white;
+      float:right;
+      padding: 250px;
+      text-align: center; 
+     /* font-family: 'Chivo Mono', monospace;*/
+      opacity: 0;
+      animation: ani2 2s ease-out 0.75s forwards,
+        ani3 2s 2s forwards;
+    }
+    @keyframes ani2{
+      100%{
+        opacity:1;
+      }
+    }
+    @keyframes ani3{
+      100%{
+        opacity:1;
+        padding: 100px 250px;
+      }
+    }
+    .img2{
+      position: absolute;
+      border-radius: 25px;
+      right: 150px;
+      bottom: 175px;
+      width:200px;
+      height:200px;
+      opacity: 0%;
+      animation: img 2s ease-out 4s forwards;
+    } 
+    .img3{
+      position: absolute;
+      border-radius: 25px;
+      right: 375px;
+      bottom: 175px;
+      width:200px;
+      height:200px;
+      opacity: 0%;
+      animation: img 2s ease-out 6s forwards;
+    }
+    .img4{
+      position: absolute;
+      border-radius: 25px;
+      right: 600px;
+      bottom: 175px;
+      width:200px;
+      height:200px;
+      opacity: 0%;
+      animation: img 2s ease-out 8s forwards;
+    }
+    @keyframes img{
+      100%{
+        opacity:75%;
+      }
+    } 
+  
+  </style>
 </head>
+
 <body>
+  <script src="script.js"></script>
+  <ul>
+    <li class='nav'><a  href="updates.html">Updates</a></li>
+    <li class='nav'><a  href="projects.html">Projects</a></li>
+    <li class='nav'><a  href="index.html">Home</a></li>
+  </ul>
+  <div class="wrapper-text">
+    <h1>Nice to meet you.</h1>
+    <p class='.p'>I'm Adithya, an avid explorer of intersections<br> between tech and art.</p>
+  </div>
+  <img class='img1' src="webimgs/tech1.png" alt="img"/>
+  <div class='img-class'> 
+    <img class='img2' src='webimgs/img2.jpg' alt='img'/>
+    <img class='img3' src='webimgs/img3.jpg' alt='img'/>
+    <img class='img4' src='webimgs/img4.png' alt='img'/>
+  </div>
 
-<h1>Welcome!</h1>
-<p>Adithya Prasad</p>
-<img src="imgs/art.jpg" alt="artofgirl">
-
+  
+<div class="bottom-sect">
+  <p class='copyright'>age30s © 2022 <br>
+    all rights reserved to original images
+  </p>
+</div> 
 </body>
-</html> 
+
+</html>
