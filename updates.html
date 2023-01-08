@@ -5,9 +5,53 @@
     <link href='https://fonts.googleapis.com/css?family=Chivo Mono' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <style>
+      *{box-sizing: border-box}
       h2{
         color: white;
       }
+      .blog-tab{
+        float:left;
+        border: 1px solid gray;
+        background-color: rgb(29, 29, 29);
+        width: 25%;
+        height: 100%;
+      }
+      .blog-tab a{
+        display: block;
+        background-color: inherit;
+        color: rgb(204, 200, 227);
+        padding: 22px,16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        text-align: left;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+      .blog-tab a:hover{
+        background-color: rgb(172, 173, 230);
+      }
+      .blog-tab a.active{
+        background-color: #ccc;
+      }
+      .tabcontent{
+        float: left;
+        padding: 0px 12px;
+        border: 1px solid rgb(29, 29, 29);
+        width: 70%;
+        border-left:none;
+        height: 100%;
+      }
+      .tabcontent h3{
+        color: #dfdfdf ;
+        background-color: black;
+        border: 3px solid white;
+      }
+      
+
+      
+      
     </style>  
   </head>
   <body>
@@ -19,16 +63,62 @@
     <h2 style='text-align: center;'>Updates</h2>
 
     <div class='project-list'> 
-      <ul>
-        
-      </ul>
+      <div class="blog-tab">
+        <a href="#" class="tablinks" onClick="openTab(event, '010423')" id="defaultOpen">01/04/23 The Plan</a>
+        <!-- <a href="#" class="tablinks" onClick="openTab(event,'010623')">01/06/23</a> -->
+      </div>
+
+      <div id="010423" class="tabcontent">
+        <h3>01/04/23</h3>
+        <p> Hello! <br> This page will act as a blog. I'll update work and progress on projects and<br>
+        oppurtunities as I work on them. This is a great way for me to establish ideas and store them somehow! 
+        <br> 
+        Currently, I have some ideas I'd like to work towards. I want better understanding of HTML, CSS, JS and scripting.
+        Along with this, I'd like to gain a good grip on other frontend development softwares such as React/Ruby, jQuery.
+        <br>
+        <br> 
+        My ideas that I plan to continue towards: 
+        <br>
+        <ol> 
+          <li>
+            "Color Me" - WIP, I need to work on establishing frontend. This might require more research on 
+            how databases work.
+          </li>
+          <li>
+            Notes app - A more visually pleasing/minimalist notes/organizer app. I'd like to 
+            implement this on iOS/android devices as well. 
+          </li>
+          <li>
+            Chess AI - this one is like me overshooting but i want to one day ^^
+          </li>
+        </ol>
+      </p>
+      </div>
+
     </div>
 
       
     <div class="bottom-sect">
-      <p class='copyright'>age30s © 2022 <br>
-        all rights reserved to original images
+      <p class='copyright'>age30s © 2023 <br>
+        all rights reserved
       </p>
     </div>
+
+    <script>
+      function openTab(evt,tabName){
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++){
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for(i = 0; i < tablinks.length; i++){
+          tablinks[i].className = tablinks[i].className.replace("active","")
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += active;
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>

@@ -62,3 +62,24 @@ a:hover{
   position: relative;
   top: 50px;
 }
+h2{
+  color: rgb(0, 0, 0);
+}
+.blog-box{
+  background-color: gray;
+  float: left;
+  height: 45%;
+  width: 200px;
+}
+.blog-box a{
+  padding: 6px 6px 6px 6px;
+  text-decoration: none;
+  background-color: gray;
+  font-size: 15px;
+  color: white;
+  display: block;
+}
+.blog-box p{
+  float: right;
+}
+
